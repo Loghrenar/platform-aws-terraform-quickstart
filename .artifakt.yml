@@ -1,7 +1,7 @@
-# Artifact metadata and configuration
+# Platform metadata and configuration
 title: Quickstart AWS Terraform
-type: free # Paid artifacts on the store coming soon
-description: Quickstart to show how an artifact works using AWS S3 Bucket
+type: free # Paid platforms on the store coming soon
+description: Quickstart to show how a platform works using AWS S3 Bucket
 cloud_provider: aws
 build_engine: terraform
 available_regions:
