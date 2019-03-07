@@ -1,8 +1,6 @@
 # Platform metadata and configuration
-title: Quickstart AWS Terraform
-type: free # Paid platforms on the store coming soon
-description: Quickstart to show how a platform works using AWS S3 Bucket
-cloud_provider: aws
+artifakt_version: "0.3"
+tag: "0.0.1"
 build_engine: terraform
 available_regions:
   - us-east-1
@@ -21,38 +19,25 @@ available_regions:
   - ap-southeast-2
   - ap-south-1
   - sa-east-1
-image: https://assets.artifakt.io/platforms/quickstart-platform.png
-category: quickstart
-main_language: html_css
-license:
-   code: mit
-   name: MIT
-tags:
- - quickstart 
- - S3 bucket 
- - AWS
- - hello world
-
 infrastructure:
-  diagram: https://assets.artifakt.io/platforms/quickstart_aws_terraform.png
   build_time: 15 #in seconds 
   cost_estimation:
     monthly_price: 0.04  #in dollars per month 
     details: calculated for 5K Get request per month and used space under 1Go in Ireland 
 
-inputs:	
+inputs:
   - 
     code: bucket_name
     name: Bucket name
     description: Choose your bucket name, must be unique and lowercase
     category: data
     type: text 
-    default: myS3bucket
-    required:  true
+    default: default
+    required: false
       
 outputs:
   - 
-    code: endpoint
+    code: main_endpoint
     name: Website URL
     description: Fully qualified website URL 
-    category: url
+    category: Application

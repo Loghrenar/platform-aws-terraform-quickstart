@@ -1,6 +1,6 @@
 # S3 bucket resource
 resource "aws_s3_bucket" "Bucket" {
-  bucket = "${var.bucket_name}"
+  bucket = "${var.bucket_name == "default" ? lower(random_string.bucket_random_name.result) : lower(var.bucket_name) }"
   acl    = "public-read"
   policy = <<EOF
 {
@@ -10,8 +10,8 @@ resource "aws_s3_bucket" "Bucket" {
    "Effect": "Allow",
    "Principal": "*",
    "Action": ["s3:GetObject"],
-   "Resource": ["arn:aws:s3:::${var.bucket_name}/*"]
- }]
+   "Resource": ["arn:aws:s3:::${var.bucket_name == "default" ? lower(random_string.bucket_random_name.result) : lower(var.bucket_name) }/*"]
+   }]
 }
   EOF
   website {
@@ -27,4 +27,9 @@ resource "aws_s3_bucket_object" "BucketObject" {
   key    = "index.html"
   source = "src/index.html"
   content_type = "text/html"
+}
+
+resource "random_string" "bucket_random_name" {
+  length = 16
+  special = false
 }
