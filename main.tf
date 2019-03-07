@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "Bucket" {
    "Principal": "*",
    "Action": ["s3:*"],
    "Resource": [
-     "arn:aws:s3:::${var.bucket_name == "default" ? lower(random_string.bucket_random_name.result) : lower(var.bucket_name) }"
+     "arn:aws:s3:::${var.bucket_name == "default" ? lower(random_string.bucket_random_name.result) : lower(var.bucket_name) }",
      "arn:aws:s3:::${var.bucket_name == "default" ? lower(random_string.bucket_random_name.result) : lower(var.bucket_name) }/*"
     ]
    }]
