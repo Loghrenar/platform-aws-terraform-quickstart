@@ -60,4 +60,7 @@ actions:
         code: content
         name: Content
         type: text
+        default: Hello world
         required: true
+        validation:
+          regex: /.+/

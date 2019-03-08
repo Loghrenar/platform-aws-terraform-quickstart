@@ -1,3 +1,6 @@
+## 0.0.5 - 2019-03-08
+- Add regex validation and default value for run params
+
 ## 0.0.4 - 2019-03-08
 - use text instead of textarea for action params
 
