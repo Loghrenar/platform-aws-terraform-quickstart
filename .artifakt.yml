@@ -62,5 +62,3 @@ actions:
         type: text
         default: Hello world
         required: true
-        validation:
-          regex: /.+/
