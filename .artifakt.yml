@@ -1,6 +1,6 @@
 # Platform metadata and configuration
 artifakt_version: "0.3"
-tag: "0.0.1"
+tag: "0.0.2"
 build_engine: terraform
 available_regions:
   - us-east-1
