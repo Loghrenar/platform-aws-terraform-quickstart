@@ -1,6 +1,6 @@
 # Platform metadata and configuration
 artifakt_version: "0.3"
-tag: "0.0.2"
+tag: "0.0.3"
 build_engine: terraform
 available_regions:
   - us-east-1
@@ -41,3 +41,17 @@ outputs:
     name: Website URL
     description: Fully qualified website URL 
     category: Application
+  
+actions:
+  -
+    code: publish
+    name: Publish
+    description: Publish new content
+    engine: shell
+    script: publish.sh
+    params:
+      - 
+        code: content
+        name: Content
+        type: text
+        required: true
