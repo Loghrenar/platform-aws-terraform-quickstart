@@ -8,4 +8,4 @@ aws --version
 
 echo "$content" > index.html
 
-aws s3 cp ./index.html s3://$TF_VAR_bucket_name
+aws s3 cp ./index.html s3://$BUCKET_NAME

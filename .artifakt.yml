@@ -41,6 +41,12 @@ outputs:
     name: Website URL
     description: Fully qualified website URL 
     category: Application
+  - 
+    code: BUCKET_NAME
+    name: Bucket name
+    description: Bucket name
+    category: Application
+  
   
 actions:
   -
