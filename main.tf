@@ -26,7 +26,7 @@ resource "aws_s3_bucket" "Bucket" {
 # Upload index.html to S3 bucket
 resource "aws_s3_bucket_object" "BucketObject" {
   depends_on = ["aws_s3_bucket.Bucket"]
-  bucket = "${var.bucket_name}"
+  bucket = "${var.bucket_name == "default" ? lower(random_string.bucket_random_name.result) : lower(var.bucket_name) }"
   key    = "index.html"
   source = "src/index.html"
   content_type = "text/html"
