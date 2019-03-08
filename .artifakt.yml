@@ -53,5 +53,5 @@ actions:
       - 
         code: content
         name: Content
-        type: text
+        type: textarea
         required: true
