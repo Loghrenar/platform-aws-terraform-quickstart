@@ -1,6 +1,6 @@
 # Platform metadata and configuration
 artifakt_version: "0.3"
-tag: "0.0.6"
+tag: "0.0.7"
 build_engine: terraform
 available_regions:
   - us-east-1
@@ -34,6 +34,14 @@ inputs:
     type: text 
     default: default
     required: false
+  - 
+    code: useless_value
+    name: Useless Value
+    description: Choose your useless value, type what you want, it is useless
+    category: data
+    type: text 
+    default: default
+    required: false    
       
 outputs:
   - 
